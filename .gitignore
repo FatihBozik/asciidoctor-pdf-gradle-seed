@@ -13,3 +13,4 @@ out
 
 # Miscellaneous
 .DS_Store
+*.svg
