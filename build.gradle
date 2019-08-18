@@ -1,12 +1,15 @@
 buildscript {
+    repositories {
+        jcenter()
+    }
     dependencies {
         classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.6.1'
         classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-beta.2'
+        classpath 'org.asciidoctor:asciidoctorj-diagram:1.5.18'
     }
 }
 
 plugins {
-    id 'java'
     id 'org.asciidoctor.convert' version '2.3.0'
 }
 
@@ -18,10 +21,10 @@ asciidoctorj {
 
 asciidoctor {
     backends 'pdf'
+    requires 'asciidoctor-diagram'
     sources {
         include 'example.adoc'
     }
-    outputDir "${buildDir}/docs"
     options doctype: 'book'
     attributes = [
             'revnumber'         : project.version,
@@ -34,6 +37,13 @@ asciidoctor {
             'rouge-style'       : 'github',
             'sourcedir'         : 'src/docs/asciidoc'
     ]
+}
+
+asciidoctor.doLast {
+    def path = "${buildDir}/asciidoc/pdf"
+    def oldFile = "${path}/example.pdf"
+    def newFile = "${path}/${rootProject.name}-v${project.version}.pdf"
+    file(oldFile).renameTo(file(newFile))
 }
 
 defaultTasks 'asciidoctor'
