@@ -1,0 +1,4 @@
+= Asciidoctor PDF Gradle Seed Project
+
+image:https://img.shields.io/github/license/fatihbozik/asciidoctor-pdf-gradle-seed?style=flat-square[Licence, link=https://github.com/FatihBozik/asciidoctor-pdf-gradle-seed/blob/master/LICENCE.adoc]
+
