@@ -1,6 +1,6 @@
 = Asciidoctor PDF Gradle Seed Project
 
-image:https://img.shields.io/github/license/fatihbozik/asciidoctor-pdf-gradle-seed?style=flat-square[Licence, link=https://github.com/FatihBozik/asciidoctor-pdf-gradle-seed/blob/master/LICENCE.adoc]
+image:https://img.shields.io/github/license/FatihBozik/asciidoctor-pdf-gradle-seed?style=flat-square[Licence, link=https://github.com/FatihBozik/asciidoctor-pdf-gradle-seed/blob/master/LICENCE.adoc]
 
 This is seed project that demonstrates how to convert AsciiDoc to PDF using Asciidoctor PDF with the Asciidoctor Gradle plugin.
 
